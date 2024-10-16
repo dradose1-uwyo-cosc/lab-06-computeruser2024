@@ -61,8 +61,21 @@ lrslowamkcwolbcgfkfciegdwqskuazxnycqkkggzsowcmafay
 ibmkdwkqmdkjesqnjiqpijixbwjhenmsrrlpcseliiajlvcaac
 zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 """
+
 random_string = random_string.replace("\n","") #remove all newline characters
 print(len(random_string)) # Print out the size for reference 
+
+# random_string = random_string.pop\"n"
+s = random_string
+key_set = set(s)
+d = {}
+for c in key_set:
+    d[c] = 0
+for c in s:
+    d[c] += 1
+for c in sorted(d.keys()):
+    if c != '\n':
+        print(f"count of '{c}'is {d[c]}.")
 
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
@@ -98,3 +111,14 @@ print(f"The letter that occurred the most is {least_occurred}")
 print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
+
+#random_string 
+
+max_key = max(d, key=d.get)
+
+min_key = min(d, key=d.get)
+print (min_key)
+
+for c in sorted(d.keys()):
+    if c != '\n':
+        print(f"count of '{c}'is {d[c]/len(random_string)*100}.")
